@@ -1,18 +1,18 @@
 <nav>
 	<ul>
 		<li>
-			<a data-swap='runners' class='swap button' href='index.php?p=runners'>Runners</a>
+			<a class="button" href="#Runners">About</a>
 		</li>
 		<li>
-			<a data-swap='zombies' class='swap button' href='index.php?p=zombies'>Zombies</a>
+			<a class="button" href="#Zombies">Track</a>
 		</li>
 	</ul>
 	<ul>
 		<li>
-			<a data-swap='volunteers' class='swap button' href='index.php?p=volunteers'>Volunteers</a>
+			<a class="button" href="#Volunteers">Volunteers</a>
 		</li>
 		<li>
-			<a class='button' href='register.php'>Register</a>
+			<a class="button" href="#Register">Register</a>
 		</li>
 	</ul>
 </nav>

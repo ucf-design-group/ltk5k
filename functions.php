@@ -154,7 +154,7 @@ function get_placement_count () {
 /** Page Partial Functions **/
 
 function get_header(){
-	include_once('partials/header.php');
+	include_once('partials/html-header.php');
 }
 
 function get_footer(){
