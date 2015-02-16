@@ -10,10 +10,6 @@
 			<h2><?php echo $slots_left; ?></h2>
 		</div> 
 	
-	<?php
-	// Includes the pae navigation
-	include_once('nav.php'); ?>
-
 	<!-- Time left over in registration period -->
 	<!-- <div class='time-left'>
 		<h2></h2>
