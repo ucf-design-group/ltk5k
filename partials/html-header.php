@@ -6,6 +6,10 @@
     <link href='style.css' rel='stylesheet'>
     <!-- Import Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    
+    <!-- Import jQuery from Google -->
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
         <?php switch (isset($_GET['p']) ? $_GET['p']: "") {
@@ -18,5 +22,4 @@
         
         ?>
     </style>
-
-    <head>
+<head>

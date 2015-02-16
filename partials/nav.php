@@ -8,8 +8,6 @@
 				<li>
 					<a class="button" href="#Zombies">Track</a>
 				</li>
-			</ul>
-			<ul>
 				<li>
 					<a class="button" href="#Volunteers">Volunteers</a>
 				</li>

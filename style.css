@@ -14,7 +14,11 @@ html {
     
     -webkit-text-size-adjust: 100%;
     /* 2 */
+
+    box-sizing: border-box;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
 
 @font-face {
     font-family: edo;
@@ -39,7 +43,7 @@ body {
     line-height: 1.25;
     letter-spacing: 0.5px;
     font-family: 'Open Sans';
-    color: #e1be83;
+    color: #000;
     padding: 0;
     margin: 0;
 }
@@ -106,7 +110,7 @@ nav {
     left:0;
     width: 100%;
     max-height:7em;
-    padding: .5em;
+    /*padding: .5em;*/
     background: rgba(32, 32, 32, .7);
     border-bottom: solid thin black;
 }
@@ -121,11 +125,12 @@ nav ul {
     margin: auto;
     text-align: center;
     display: inline-block;
+    font-size:0;
 }
 
 nav li {
     display: inline-block;
-    margin: 0em 1em;
+    font-size:16px;
 }
 
 header {
@@ -133,10 +138,16 @@ header {
     text-align: center;
     background-image: url(img/use_your_illusion.png);
     background-color: #2B2B2B;
-    padding:3em 2%;
+    padding:5em 8%;
+    /* Equalevant to 100% view height
+     * For more information on (xvh) view: http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window 
+     */
+    height:100vh;
+    position:relative;
+    overflow:hidden;
 }
 
-header .logo {
+header .header-logo {
     background-image: url(img/header.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -145,7 +156,39 @@ header .logo {
     background-size: 100%;
     max-width: 100%;
     padding-top: 50%;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    position:absolute;
+
 }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+nav a.button {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    font-family: "Orbitron";
+    padding:1.5em 2.5em;
+    margin:0;
+    border:none;
+    cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+nav .button:hover,
+nav .button:focus {
+    background-color:#A1E871;
+}
+
 /**
  * Create "sections" for information (articles) to be held in that will span the
  * width of the page and be responsive.
@@ -185,7 +228,7 @@ h3,
 h4,
 h5 {
     font-family: 'Playfair Display SC';
-    color: #97e8cf;
+    color: #AAE7FC;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -428,44 +471,6 @@ button[disabled],
 html input[disabled] {
     cursor: default;
 }
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-.button {
-    display: inline-block;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: white;
-    padding: 10px 15px;
-    font-family: "edo";
-    letter-spacing: 3.5px;
-    margin: 20px auto;
-    border: 0 none;
-    border-radius: 10px;
-    background-image: url(img/btnpattern.png);
-    text-shadow: 0 -1px 0 black;
-    box-shadow: 0 1px 0 #666666, 0 5px 0 #444444, 0 6px 6px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    -webkit-transition: all 150ms ease;
-    transition: all 150ms ease;
-}
-
-.button:hover,
-.button:focus {
-    box-shadow: 0 1px 0 #666666, 0 3px 0 #444444, 0 4px 4px rgba(0, 0, 0, 0.6);
-    position: relative;
-    left: 1px;
-    top: 1px;
-    color: white;
-}
-
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -701,7 +706,17 @@ form .submit {
 
 .sponsors {
     text-align: center;
+} 
+
+/* Site Specific stlying */
+
+#about{
+   /* position: absolute;
+    top:100%;*/
+    background-color:#fff;
+    padding:5em;
 }
+
 
 @media screen and (max-width: 500px) {
     header .logo {

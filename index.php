@@ -2,17 +2,16 @@
 
 <body>
 
-    <?php
-    // Includes the pae navigation
-    include_once('partials/nav.php'); ?>
-
-    <?php // Include page header
-    include_once( 'partials/header.php' ); ?>
+    <?php // Includes navigation and header banner
+    include_once( "partials/header.php" ); ?>
 
     <?php // Include video under navagation
-    include_once( 'partials/video.php' ) ?>
+    include_once( 'partials/video.php' ); ?>
 
-    <section id='about'>
+   <!--  <?php // Include registration form
+    //include_once( 'partials/register.php' ); ?> -->
+
+    <section id='catchy-caption'>
         <h2>Light The Knight 5K</h2>
         <h1>Get Your Run ON!</h1>
         <article class='info'>
@@ -37,9 +36,9 @@
             </ul>
             <p>What to bring: The clothes on your body and a UCF ID. The UCF Campus Activities Board is not responsible for the loss of any items. Please leave precious items at home, or in your car, and assume all responsibility.</p>
             <p>Race Map:</p>
-            <p class="map">
+<!--             <p class="map">
                 <img src="img/map.jpg" alt="race-map">
-            </p>
+            </p> -->
         </article>
         <article class='packet'>
             <h4>Packet Pickup</h4>
@@ -81,9 +80,9 @@
             </ul>
             <p>What to bring: The clothes on your body and a UCF ID. The UCF Campus Activities Board is not responsible for the loss of any items. Please leave precious items at home, or in your car, and assume all responsibility.</p>
             <p>Race Map:</p>
-            <p class="map">
+          <!--   <p class="map">
                 <img src="img/map.jpg" alt="race-map">
-            </p>
+            </p> -->
         </article>
         <article class='party'>
             <h4>Survivor Party!</h4>
@@ -129,4 +128,4 @@
             <p>Please email <a href="mailto:cabevent@ucf.edu">cabevent@ucf.edu</a> or call <a href="tel:4078233294">(407) 823-3294</a> for any questions!</p>
         </article>
     </section>
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
