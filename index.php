@@ -2,17 +2,21 @@
 
 <body>
 
+    <?php
+    // Includes the pae navigation
+    include_once('partials/nav.php'); ?>
+
     <?php // Include page header
     include_once( 'partials/header.php' ); ?>
 
     <?php // Include video under navagation
     include_once( 'partials/video.php' ) ?>
 
-    <section id='runners'>
+    <section id='about'>
         <h2>Light The Knight 5K</h2>
         <h1>Get Your Run ON!</h1>
         <article class='info'>
-            <h4>What's going on?</h4>
+            <h3>What's going on?</h4>
             <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
             <ul>
                 <li>Registration Dates: 08/19/2014 - 11/9/2014 </li>
