@@ -3,16 +3,16 @@
 	<!-- Header informaiton goes here -->
 
 
-		<!-- <div class='logo'></div>
+		<div class='logo'></div>
 		<h1>Light The Knight 5K</h1>
 		<a href="resources/run_times_2014.pdf"><h2>Click to View Run Times</h2></a>
  	<div class='slots-left'>
 			<h2><?php echo $slots_left; ?></h2>
-		</div>  -->
+		</div> 
 	
 	<?php
 	// Includes the pae navigation
-	 include_once('partials/nav.php'); ?>
+	include_once('nav.php'); ?>
 
 	<!-- Time left over in registration period -->
 	<!-- <div class='time-left'>
