@@ -17,9 +17,10 @@
         <!-- <h3>What's going on?</h4> -->
     </section>
     
-    <section id='catchy-caption'>
+    <section id='about'>
         
         <article class='info'>
+            <h3>Join us for the annual Light The Knight Run!
             <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
             <ul>
                 <li>Registration Dates: 08/19/2014 - 11/9/2014 </li>

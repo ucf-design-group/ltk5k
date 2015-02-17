@@ -7,6 +7,9 @@
 			<!-- Load Stellar.js for parallax effects -->
 			<script type="text/javascript" src="js/jquery.stellar.js"></script>
 
+			<!-- Load animatescroll.js for automatic scrolling effects -->
+			<script type="text/javascript" src="js/animatescroll.min.js"></script> 
+
 			<!-- Custom javascript functions/calls -->
 			<script src='js/main.js' type='text/javascript'></script>
 			<!--<script type="text/javascript" src="//use.typekit.net/vak2hnx.js"></script>

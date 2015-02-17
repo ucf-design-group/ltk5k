@@ -110,199 +110,6 @@ audio:not([controls]) {
 template {
     display: none;
 }
-/* Body structure formatting
-   ========================================================================== */
-
-/* Default navigation styling (when user is atthe top of the page). */
-nav {
-    position: fixed;
-    top:0;
-    left:0;
-    z-index:1;
-    width: 100%;
-    max-height:7em;
-    border-bottom: thin solid rgba(155, 155, 155, .3);
-
-
-    transition: all .15s;
-    -moz-transition: all .15s; /* Firefox 4 */
-    -webkit-transition: all .15s; /* Safari and Chrome */
-    -o-transition: all .15s; /* Opera */
-}
-
-/* Navigation styling will change to the following when the user scrolls down the page. */
-nav.compressed{
-    max-height:5em;
-    background: rgba(25, 25, 25, 1);
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border:none;
-
-    transition: all .15s;
-    -moz-transition: all .15s; /* Firefox 4 */
-    -webkit-transition: all .15s; /* Safari and Chrome */
-    -o-transition: all .15s; /* Opera */
-}
-
-
-nav article{
-    text-align: right;
-}
-
-
-nav .header-icon{
-    float: left;
-    background-image: url(img/header-icon.png);
-    background-repeat:no-repeat;
-    background-size:140px 53px;
-    height: 65px;
-    background-position-y: 7px;
-    width:200px;
-}
-
-nav ul {
-    padding: 0;
-    margin: auto;
-    text-align: right;
-    display: inline-block;
-    font-size:0;
-}
-
-nav li {
-    display: inline-block;
-    font-size:13px;
-}
-
-header {
-    padding: 0;
-    text-align: center;
-    background-image: url(img/use_your_illusion.png);
-    background-color: #2B2B2B;
-    /*padding:5em 8%;*/
-    /* Equalevant to 100% view height
-     * For more information on (xvh) view: http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window 
-     */
-    height:100vh;
-    position:relative;
-    overflow:hidden;
-}
-
-header .banner {
-    background-image: url(img/header.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    max-width: 100%;
-    padding-top: 50%;
-    width:100%;
-    height:100vh;
-    top:0;
-    left:0;
-    position:absolute;
-    z-index:0;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-nav a {
-    font-family: 'Montserrat';
-    font-size: 12px;
-    line-height:16.8px;
-    color: white;
-    display: inline-block;
-    margin:0;
-    border:none;
-    cursor: pointer;
-    letter-spacing:0px;
-    text-transform:uppercase;
-    font-weight: 100;
-    letter-spacing:.5px;
-    padding: 2em;
-    -webkit-font-smoothing: antialiased;
-
-
-    -webkit-transition: all 250ms ease;
-    transition: all 150ms ease;
-}
-
-nav .button:hover {    
-    color: #89D6F9;
-    -webkit-transition: all 250ms ease;
-    transition: all 150ms ease;
-}
-
-.button-overlay-wrapper {
-    position:absolute;
-    top:47.5vh;
-    width:100%;
-    padding:3em;
-    background-color: rgba(0, 0, 0, .3);
-    margin:auto;
-
-}
-.button-overlay-wrapper a{
-    border-radius: 2px;
-    padding: 1em 2.2em;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: white;
-    font-family: Open Sans;
-    letter-spacing: .1em;
-    margin: 15px;
-    font-weight: 100;
-    max-width: 400px;
-}
-
-.button-overlay-wrapper a.register{
-    background-color: #3DC8DA;
-}
-
-.button-overlay-wrapper a.video{
-    background-color: #D63DDA ; 
-}
-
-/**
- * Create "sections" for information (articles) to be held in that will span the
- * width of the page and be responsive.
- */
-
-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-section.dark{
-    background-color: #2B2B2B;
-}
-
-section.light{
-    background-color: #fff;
-}
-
-
-/**
- * Articles that will contain information, be centered within the middle of each section
- */
-
-article {
-    width: 100%;
-    max-width:1000px;
-    margin: auto;
-    text-align: center;
-}
-
-.header-caption{
-    padding:3em 0;
-    background-color:neonyellow;
-}
 /* Copy formatting
    ========================================================================== */
 
@@ -313,8 +120,6 @@ h3,
 h4,
 h5 {
     font-family: 'Montserrat';
-    text-transform: uppercase;
-    color: #FFF;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -322,7 +127,7 @@ h5 {
 
 h1 {
     font-size: 5em;
-    line-height: 
+    text-transform:uppercase;
 }
 
 h2 {
@@ -435,6 +240,209 @@ sup {
 sub {
     bottom: -0.25em;
 }
+/* Body structure formatting
+   ========================================================================== */
+
+/* Default navigation styling (when user is atthe top of the page). */
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width: 100%;
+    max-height:7em;
+    border-bottom: thin solid rgba(155, 155, 155, .3);
+
+
+    transition: all .15s;
+    -moz-transition: all .15s; /* Firefox 4 */
+    -webkit-transition: all .15s; /* Safari and Chrome */
+    -o-transition: all .15s; /* Opera */
+}
+
+/* Navigation styling will change to the following when the user scrolls down the page. */
+nav.compressed{
+    max-height:5em;
+    background: rgba(25, 25, 25, 1);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:none;
+
+    transition: all .15s;
+    -moz-transition: all .15s; /* Firefox 4 */
+    -webkit-transition: all .15s; /* Safari and Chrome */
+    -o-transition: all .15s; /* Opera */
+}
+
+
+nav article{
+    text-align: right;
+}
+
+
+nav .header-icon{
+    float: left;
+    background-image: url(img/header-icon.png);
+    background-repeat:no-repeat;
+    background-size:140px 53px;
+    height: 65px;
+    background-position-y: 7px;
+    width:200px;
+}
+
+nav ul {
+    padding: 0;
+    margin: auto;
+    text-align: right;
+    display: inline-block;
+    font-size:0;
+}
+
+nav li {
+    display: inline-block;
+    font-size:13px;
+}
+
+header {
+    padding: 0;
+    text-align: center;
+    background-image: url(img/use_your_illusion.png);
+    background-color: #2B2B2B;
+    /*padding:5em 8%;*/
+    /* Equalevant to 100% view height
+     * For more information on (xvh) view: http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window 
+     */
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+header .banner {
+    background-image: url(img/header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    max-width: 100%;
+    padding-top: 50%;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index:0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+nav .button {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height:16.8px;
+    color: white;
+    display: inline-block;
+    margin:0;
+    border:none;
+    cursor: pointer;
+    letter-spacing:0px;
+    text-transform:uppercase;
+    font-weight: 100;
+    letter-spacing: .5px;
+    padding: 2em;
+    -webkit-font-smoothing: antialiased;
+
+
+    -webkit-transition: all 250ms ease;
+    transition: all 150ms ease;
+}
+
+nav .button:hover {    
+    color: #89D6F9;
+    -webkit-transition: all 250ms ease;
+    transition: all 150ms ease;
+}
+
+.button-overlay-wrapper {
+    position:absolute;
+    top:47.5vh;
+    width:100%;
+    padding:3em;
+    background-color: rgba(0, 0, 0, .3);
+    margin:auto;
+
+}
+.button-overlay-wrapper a{
+    border-radius: 2px;
+    padding: 1em 2.2em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    font-family: Open Sans;
+    letter-spacing: .3em;
+    margin: 15px;
+    font-weight: 100;
+    max-width: 400px;
+}
+
+.button-overlay-wrapper a.register{
+    background-color: #3DC8DA;
+}
+
+.button-overlay-wrapper a.video{
+    background-color: #D63DDA ; 
+}
+
+/**
+ * Create "sections" for information (articles) to be held in that will span the
+ * width of the page and be responsive.
+ */
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section .dark{
+    background-color: #2B2B2B;
+}
+
+section .light{
+    background-color: #fff;
+}
+
+
+/**
+ * Articles that will contain information, be centered within the middle of each section
+ */
+
+article {
+    width: 100%;
+    max-width:1000px;
+    margin: auto;
+    text-align: center;
+}
+
+section.header-caption{
+    padding:3em 0;
+    color:#FFF !important;
+}
+
+section.header-caption h1,
+section.header-caption h2,
+section.header-caption h3,
+section.header-caption h4,
+section.header-caption h5 {
+    margin:0;
+    margin:auto;
+}
+
 /* Embedded content
    ========================================================================== */
 /**
