@@ -11,11 +11,15 @@
    <!--  <?php // Include registration form
     //include_once( 'partials/register.php' ); ?> -->
 
-    <section id='catchy-caption'>
-        <h2>Light The Knight 5K</h2>
+    <section class="header-caption" style="background-color: rgba(122, 218, 250, 1)">
+        <!-- <h2>Light The Knight 5K</h2> -->
         <h1>Get Your Run ON!</h1>
+        <!-- <h3>What's going on?</h4> -->
+    </section>
+    
+    <section id='catchy-caption'>
+        
         <article class='info'>
-            <h3>What's going on?</h4>
             <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
             <ul>
                 <li>Registration Dates: 08/19/2014 - 11/9/2014 </li>

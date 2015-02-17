@@ -1,20 +1,18 @@
-<section id="nav">
-	<article>
-		<nav>
+<nav>
+	<section>
+		<article>
+			<div class="header-icon"></div>
 			<ul>
 				<li>
-					<a class="button" href="#Runners">About</a>
+					<a class="button" href="#Register">REGISTER</a>
 				</li>
 				<li>
-					<a class="button" href="#Zombies">Track</a>
+					<a class="button" href="#About">About</a>
 				</li>
 				<li>
 					<a class="button" href="#Volunteers">Volunteers</a>
 				</li>
-				<li>
-					<a class="button" href="#Register">Register</a>
-				</li>
 			</ul>
-		</nav>
-	</article>
-</section>
+		</article>
+	</section>
+</nav>
