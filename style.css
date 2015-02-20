@@ -123,6 +123,7 @@ h5 {
     text-align: center;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -139,6 +140,10 @@ h3 {
 }
 
 h4 {
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: Montserrat;
+    letter-spacing: 0em;
     /*    font-size: 2.5em;*/
     /*    margin: 0.5em 0 0.25em 0;*/
 }
@@ -307,8 +312,7 @@ nav li {
 header {
     padding: 0;
     text-align: center;
-    background-image: url(img/use_your_illusion.png);
-    background-color: #2B2B2B;
+    background: #2B2B2B url(img/background.jpg);
     /*padding:5em 8%;*/
     /* Equalevant to 100% view height
      * For more information on (xvh) view: http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window 
@@ -322,9 +326,9 @@ header .banner {
     background-image: url(img/header.png);
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: 89%;
+    -o-background-size: 89%;
+    background-size: 89%;
     max-width: 100%;
     padding-top: 50%;
     width:100%;
@@ -333,6 +337,7 @@ header .banner {
     left:0;
     position:absolute;
     z-index:0;
+    display:none;
 }
 
 button::-moz-focus-inner,
@@ -430,8 +435,14 @@ article {
 }
 
 section.header-caption{
-    padding:3em 0;
+    padding:3.5em 0;
     color:#FFF !important;
+
+}
+
+section.content {
+    padding:5em;
+    background:#FFF;
 }
 
 section.header-caption h1,
@@ -805,13 +816,59 @@ form .submit {
 
 /* Site Specific stlying */
 
-#about{
+about{
    /* position: absolute;
     top:100%;*/
     background-color:#fff;
     padding:5em;
 }
 
+#video-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+}
+
+#video-wrapper video{
+    width:auto;
+    height:100vh;
+    margin:auto;
+}
+
+.scroll-button-wrapper{
+    position:absolute;
+    bottom:75px;
+    left:50vw;
+}
+
+.scroll-arrow{
+    opacity:1;
+
+    transition: all 2.5s;
+    -moz-transition: all 2.5s; /* Firefox 4 */
+    -webkit-transition: all 2.5s; /* Safari and Chrome */
+    -o-transition: all 2.5s; /* Opera */
+}
+
+.scroll-arrow i{
+    font-size:32px;
+    font-weight: 100;
+    color:#FFF;
+    cursor:pointer;
+}
+
+.fade-scroll-arrow{
+    position:absolute;
+    bottom:-100px;
+    opacity:0;
+
+    transition: all 2.5s;
+    -moz-transition: all 2.5s; /* Firefox 4 */
+    -webkit-transition: all 2.5s; /* Safari and Chrome */
+    -o-transition: all 2.5s; /* Opera */
+}
 
 @media screen and (max-width: 500px) {
     header .header-banner {

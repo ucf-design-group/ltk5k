@@ -9,7 +9,11 @@
     <?php // Include header banner
     include_once( 'header-banner.php' ); ?>
 
-    <?php // Include header overlay buttons
-    include_once( 'button-overlay.php'); ?>
+    
+    <?php //Include full screen video player 
+    include_once( 'button-overlay.php') ?> 
+
+    <?php //Include full screen video player 
+    // include_once( 'video-player.php') ?> 
     
 </header>

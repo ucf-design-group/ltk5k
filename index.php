@@ -11,24 +11,24 @@
    <!--  <?php // Include registration form
     //include_once( 'partials/register.php' ); ?> -->
 
-    <section class="header-caption" style="background-color: rgba(122, 218, 250, 1)">
+    <section id="about" class="header-caption" style="background-color: rgba(122, 218, 250, 1)">
         <!-- <h2>Light The Knight 5K</h2> -->
-        <h1>Get Your Run ON!</h1>
+        <h4>Get your run on! Join us for the first ever Light The Knight 5k!</h1>
         <!-- <h3>What's going on?</h4> -->
     </section>
-    
-    <section id='about'>
+
+    <section class="content">
         
         <article class='info'>
             <h3>Join us for the annual Light The Knight Run!
-            <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
+<!--             <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
             <ul>
                 <li>Registration Dates: 08/19/2014 - 11/9/2014 </li>
                 <li>Race date: 11/13/2014</li>
                 <li>Start time: 8:00 PM</li>
-            </ul>
+            </ul> -->
         </article>
-        <article class='survive'>
+       <!--  <article class='survive'>
             <h4>How do you survive?</h4>
             <p>The two (2) flags attached to your belt represent your life. That's two lives you have to get yourself across campus into the safety zone. We have mapped out the safest path, but you have to move fast. Obstacles may stand in your way and there's a chance zombies have broken through our barricades - stay aware. We have been able to set up a first aid station along the path, if you lose a life it's possible our medics can help.</p>
             <p>Your peers, intuition and agility are all that can help you now. Make it to the safe zone with at least one flag intact and you have survived - if not, you'll be missed.</p>
@@ -41,10 +41,10 @@
             </ul>
             <p>What to bring: The clothes on your body and a UCF ID. The UCF Campus Activities Board is not responsible for the loss of any items. Please leave precious items at home, or in your car, and assume all responsibility.</p>
             <p>Race Map:</p>
-<!--             <p class="map">
+            <p class="map">
                 <img src="img/map.jpg" alt="race-map">
-            </p> -->
-        </article>
+            </p> 
+        </article> 
         <article class='packet'>
             <h4>Packet Pickup</h4>
             <p>Packet Distribution, including your bib number and information for the race, will be available on Monday (11/10) and Tuesday (11/11) from 5:00pm - 8:00pm in the Arena Lobby.</p>
@@ -85,9 +85,9 @@
             </ul>
             <p>What to bring: The clothes on your body and a UCF ID. The UCF Campus Activities Board is not responsible for the loss of any items. Please leave precious items at home, or in your car, and assume all responsibility.</p>
             <p>Race Map:</p>
-          <!--   <p class="map">
+             <p class="map">
                 <img src="img/map.jpg" alt="race-map">
-            </p> -->
+            </p> 
         </article>
         <article class='party'>
             <h4>Survivor Party!</h4>
@@ -131,6 +131,6 @@
         </article>
         <article class='other'>
             <p>Please email <a href="mailto:cabevent@ucf.edu">cabevent@ucf.edu</a> or call <a href="tel:4078233294">(407) 823-3294</a> for any questions!</p>
-        </article>
+        </article> -->
     </section>
 <?php get_footer(); ?>
