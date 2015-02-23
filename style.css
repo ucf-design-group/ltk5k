@@ -15,6 +15,12 @@
  */
 
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     font-family: sans-serif;
     /* 1 */
@@ -50,7 +56,7 @@ html {
 body {
     background: #fff;
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 1.65;
     letter-spacing: 0.5px;
     font-family: 'Open Sans';
     color: #000;
@@ -120,10 +126,10 @@ h3,
 h4,
 h5 {
     font-family: 'Montserrat';
-    text-align: center;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    margin-bottom:1.5em;
 }
 
 h1 {
@@ -136,20 +142,29 @@ h2 {
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 2.2em;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    -webkit-text-transform: none;
 }
 
 h4 {
     font-size: 1.3em;
     font-weight: 300;
-    font-family: Montserrat;
     letter-spacing: 0em;
     /*    font-size: 2.5em;*/
     /*    margin: 0.5em 0 0.25em 0;*/
 }
 
+h5{
+    font-size:1.1em;
+}
+
 p {
-    color: white;
+    margin:0;
+    margin-bottom:1em;
+    font-family: 'Open Sans';
 }
 
 p.success {
@@ -412,6 +427,7 @@ section {
     width: 100%;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 section .dark{
@@ -422,16 +438,37 @@ section .light{
     background-color: #fff;
 }
 
+section.no-padding,
+section.no-margin{
+    padding:0;
+    margin:0;
+}
 
 /**
  * Articles that will contain information, be centered within the middle of each section
  */
 
+
 article {
     width: 100%;
     max-width:1000px;
     margin: auto;
-    text-align: center;
+}
+
+.content article{
+    padding:3.5rem 0;
+}
+
+section.no-padding article{
+    margin:0;
+    padding:0;    
+    width:100%;
+    min-width:100%;
+}
+
+section.no-margin article{
+    margin:auto;
+    padding:; 3.5rem 0;
 }
 
 section.header-caption{
@@ -443,6 +480,7 @@ section.header-caption{
 section.content {
     padding:5em;
     background:#FFF;
+    text-align: left;
 }
 
 section.header-caption h1,
@@ -690,12 +728,6 @@ th {
     padding: 0;
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 form {
     zoom: 1;
 }
@@ -708,10 +740,6 @@ form:after {
 
 form:after {
     clear: both;
-}
-
-li {
-    color: #e1be83;
 }
 
 img {
@@ -761,9 +789,11 @@ img .register-info {
 }
 
 footer {
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin: auto;
     padding: 2em 0px;
+    background-color:#2B2B2B;
+    text-align: center;
 }
 
 footer .sponsors {
@@ -771,8 +801,10 @@ footer .sponsors {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+    max-width:1000px;
     height: 0px;
     padding-top: 30%;
+    margin:auto;
 }
 
 form fieldset {
@@ -868,6 +900,107 @@ about{
     -moz-transition: all 2.5s; /* Firefox 4 */
     -webkit-transition: all 2.5s; /* Safari and Chrome */
     -o-transition: all 2.5s; /* Opera */
+}
+
+ul.register-links {
+    margin:0;
+    padding:0;
+    font-size:0;
+    list-style: none;
+    width:100%;
+}
+
+ul.register-links li{
+    font-size:24px;
+    width:50%;
+    height:7em;
+    background:gainsboro;
+    display:inline-block;
+    list-style:none;
+}
+
+ul.register-links i{
+    color:#FFF;
+    font-size: 80%;
+}
+
+ul{
+    color:inheirt;
+}
+
+.col-wrapper{
+    font-size:0;
+}
+
+.col-md-6{
+    width:50%;
+    display:inline-block;
+    font-size:16px;
+}
+
+/* Selects every even element */
+.col-md-6:nth-child(2n){
+    padding:0 0 0 2rem;
+}
+
+/* Selects every odd element*/
+.col-md-6:nth-child(2n+1){
+    padding:0 1rem 0 0;
+}
+
+
+.col-md-6 span{
+    font-weight:bolder;
+    color: rgb(0, 166, 204);
+}
+
+.registration-button-wrapper{
+    width:100%;
+    padding:2em 0 6em;
+    margin:0;
+}
+
+.registration-button-wrapper a {
+    margin:2rem;
+}
+
+.registration-button-wrapper i{
+    margin-left: .75rem;
+}
+
+a.no-fill{
+    background-color:none;
+    border: medium solid white;
+    color:white;
+    padding:1em 1.5em;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+a.runner{
+    color: rgb(16, 225, 225);
+    border-color: rgb(16, 225, 225);
+    cursor:pointer;
+}
+
+a.volunteer{
+    cursor:pointer;
+    color: rgb(186, 32, 186);
+    border-color: rgb(186, 32, 186);
+}
+
+a.runner:hover, 
+a.runner:active{
+    cursor:pointer;
+    color:#FFF;
+    background-color: rgb(16, 225, 225);
+}
+
+a.volunteer:hover,
+a.volunteer:active{
+    cursor:pointer;
+    color:#FFF;
+    background-color: rgb(186, 32, 186);
 }
 
 @media screen and (max-width: 500px) {
