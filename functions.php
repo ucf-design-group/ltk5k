@@ -157,6 +157,12 @@ function get_header(){
 	include_once('partials/html-header.php');
 }
 
+
 function get_footer(){
 	include_once('partials/footer.php');
 }
+
+/** Necessary Inclusions **/
+
+// Include registration objects for both runners and volunteers
+include_once('partials/register-objects.php');

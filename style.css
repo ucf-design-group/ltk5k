@@ -307,7 +307,7 @@ nav .header-icon{
     background-repeat:no-repeat;
     background-size:140px 53px;
     height: 65px;
-    background-position-y: 7px;
+    background-position: -18px 7px;
     width:200px;
 }
 
@@ -816,9 +816,14 @@ form fieldset {
 
 form fieldset input {
     background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #e1be83;
-    font-size: 1.5em;
-    color: white;
+    padding:.25em;
+    border: thin solid gainsboro;/*rgb(0, 166, 204);*/
+    font-size: 1em;
+    color: #000;
+    border-radius:2px;
+    max-width:none;
+    width:90%;
+    min-width:260px;
 }
 
 form fieldset select {
@@ -840,6 +845,10 @@ form table.role td {
 form .submit {
     clear: both;
     text-align: center;
+}
+
+form input[type="radio"]{
+    width:auto;
 }
 
 .sponsors {
@@ -936,6 +945,7 @@ ul{
     width:50%;
     display:inline-block;
     font-size:16px;
+    vertical-align:top;
 }
 
 /* Selects every even element */
@@ -953,6 +963,13 @@ ul{
     font-weight:bolder;
     color: rgb(0, 166, 204);
 }
+
+.map{
+    background: url(img/sprite.png) no-repeat center 100%;
+    width:100%;
+    height:auto;
+}
+
 
 .registration-button-wrapper{
     width:100%;
@@ -978,22 +995,24 @@ a.no-fill{
 }
 
 a.runner{
-    color: rgb(16, 225, 225);
-    border-color: rgb(16, 225, 225);
+    color:#FFF;
+    /*color: rgb(0, 166, 204);*/
+    border-color:  rgb(0, 166, 204);
     cursor:pointer;
 }
 
 a.volunteer{
-    cursor:pointer;
-    color: rgb(186, 32, 186);
+    color:#FFF;
+/*    color: rgb(186, 32, 186);*/
     border-color: rgb(186, 32, 186);
+    cursor:pointer;
 }
 
 a.runner:hover, 
 a.runner:active{
     cursor:pointer;
     color:#FFF;
-    background-color: rgb(16, 225, 225);
+    background-color:  rgb(0, 166, 204);
 }
 
 a.volunteer:hover,
@@ -1002,6 +1021,36 @@ a.volunteer:active{
     color:#FFF;
     background-color: rgb(186, 32, 186);
 }
+
+/* Registration Form Formatting */
+.form-registration{
+
+}
+
+/* Properties that both headers will inherit */
+.runners-header,
+.volunteers-header {
+    background-image:none;
+    height:auto;
+
+}
+
+.runners-header{
+    background-color: rgb(0, 166, 204);
+}
+
+.volunteers-header{
+    background-color: rgb(186, 32, 186);
+}
+
+.form-wrapper{
+    width:100%;
+    height:100vh;
+    padding:3em 0;
+    margin:auto;
+}
+
+
 
 @media screen and (max-width: 500px) {
     header .header-banner {

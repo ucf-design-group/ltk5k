@@ -18,7 +18,7 @@
     <section class="content">
         <article class='info'>
             <h3>General Information</h3>
-            <p>It happened again: A chemistry experiment gone wrong has resulted in the virus that is beginning the Zombie Apocalypse, and it is beginning at UCF. Our campus is being overrun by the living-dead and they are very, very hungry.</p>
+            <p>Light the Knight 5K is a run/walk with a fun and exciting glow experience. The run is not timed and is meant to be enjoyed by runners as they go through different zones of color and music. Get ready to run/walk through the UCF campus glowing.</p>
         </article>
 
         <article class="col-wrapper">
@@ -30,12 +30,8 @@
                 <p>Your peers, intuition and agility are all that can help you now. Make it to the safe zone with at least one flag intact and you have survived - if not, you'll be missed.</p>
             </div>
             <div class="col-md-6">
-                <i class="fa fa-mail"></i>
-                <!--<h3>When and Where?</h3>
-                <p>Date: <span>3/17/15</span></p>
-                <p>Show up: <span>5PM - 6:45PM</span></p>
-                <p>Race Duration: <span>7PM - 11PM</span></p>
-                <p>Your peers, intuition and agility are all that can help you now. Make it to the safe zone with at least one flag intact and you have survived - if not, you'll be missed.</p> -->
+                <h3>Map</h3>
+                <div class="map"></div>
             </div>
         </article>
     </section>
@@ -46,12 +42,12 @@
     </section>
 
 
-    <section class="no-padding">
-        <article style="background-color:rgb(237, 237, 237);" class="no-padding">
-            <h3 style="padding-top:2em;">Register Today!</h2>
+    <section class="no-padding" data-stellar-background-ratio=".25" style="background-image: url(img/background.jpg); ">
+        <article style="background-color:none;" class="no-padding"><!-- rgb(237, 237, 237) -->
+            <h3 style="padding-top:2em; color:white">Register Today!</h2>
             <div class="registration-button-wrapper">
-                <a class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
-                <a class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a>
+                <a href="http://osi.ucf.edu/ltk5k/runners" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
+                <a href="http://osi.ucf.edu/ltk5k/volunteers" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a>
             </div>
         </article>
     </section>
@@ -98,8 +94,6 @@
             <p>Please email <a href="mailto:cabevent@ucf.edu">cabevent@ucf.edu</a> or call <a href="tel:4078233294">(407) 823-3294</a> for any questions!</p>
         </article>
     </section> -->
-
-
 
     <section id="about" class="header-caption" style="background-color: rgba(122, 218, 250, 1)">
         <h4>Become part of the race! Register as a runner or volunteer today!</h4>

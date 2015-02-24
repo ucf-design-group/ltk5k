@@ -1,4 +1,4 @@
-<?php include('functions.php'); ?>
+
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
@@ -64,7 +64,7 @@
 				<p>You must be available for informational meeting on Monday (11/10) or Tuesday (11/11) either 5:00pm - 6:00pm or 6:00pm - 7:00pm at the Arena Lobby.</p>
 			</article>
 <?php
-		if (time() < strtotime("November 9, 2014 11:59pm") && !$full && time() > strtotime("August 5, 2014 12:00am")) {
+		/*if (time() < strtotime("November 9, 2014 11:59pm") && !$full && time() > strtotime("August 5, 2014 12:00am")) {*/
 ?>
 			<article class='form' id='form'>
 				<h3><?php echo $message; ?></h3>
@@ -221,18 +221,9 @@ foreach ($placement_count['volunteers'] as $group => $remaining_spots) {
 				</form>
 			</article>
 <?php
-		}
+		//}
 ?>
 			<article class='sponsors'>
 				<p>Special recognition to those who helped the Campus Activities Board make this event possible!</p>
 			</article>
-			<footer>
-				<div class="sponsors"></div>
-				<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
-				<script src='js/main.js' type='text/javascript'></script>
-				<script type="text/javascript" src="//use.typekit.net/vak2hnx.js"></script>
-				<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-			</footer>
-		</section>
-	</body>
-</html>
+<?php get_footer() ?>
