@@ -46,8 +46,10 @@
         <article style="background-color:none;" class="no-padding"><!-- rgb(237, 237, 237) -->
             <h3 style="padding-top:2em; color:white">Register Today!</h2>
             <div class="registration-button-wrapper">
-                <a href="http://osi.ucf.edu/ltk5k/runners" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
-                <a href="http://osi.ucf.edu/ltk5k/volunteers" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a>
+<!--                 <a href="http://osi.ucf.edu/ltk5k/runners" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
+                <a href="http://osi.ucf.edu/ltk5k/volunteers" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a> -->
+                <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
+                <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a>
             </div>
         </article>
     </section>
