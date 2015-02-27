@@ -24,15 +24,20 @@
         <article class="col-wrapper">
             <div class="col-md-6">
                 <h3>When and Where?</h3>
-                <p>Date: <span>3/17/15</span></p>
-                <p>Show up: <span>5PM - 6:45PM</span></p>
-                <p>Race Duration: <span>7PM - 11PM</span></p>
-                <p>Your peers, intuition and agility are all that can help you now. Make it to the safe zone with at least one flag intact and you have survived - if not, you'll be missed.</p>
+                <p>Date: <span>4/3/15</span></p>
+                <p>Check-in: <span>7PM</span></p>
+                <p>Race Time: <span>8PM</span></p>
+                <!--<p>Your peers, intuition and agility are all that can help you now. Make it to the safe zone with at least one flag intact and you have survived - if not, you'll be missed.</p>-->
             </div>
             <div class="col-md-6">
                 <h3>Map</h3>
                 <div class="map"></div>
             </div>
+        </article>
+
+        <article class='info'>
+            <h3>After Party!</h3>
+            <p>The party doesn’t stop once you finish the 5K! After the run there will be a DJ battle competition hosted by Knights of the Turntables. Plan to stick around to choose the best DJ of the Knight as well enjoy some snacks and activities to keep the party going. Don not forget to take a picture to remember the occasion!</p>
         </article>
     </section>
 
@@ -48,8 +53,8 @@
             <div class="registration-button-wrapper">
 <!--                 <a href="http://osi.ucf.edu/ltk5k/runners" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
                 <a href="http://osi.ucf.edu/ltk5k/volunteers" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a> -->
-                <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a>
-                <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill volunteer">Volunteer Registration<i class="fa fa-arrow-right"></i></a>
+                <!-- <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill runner">Runner Registration<i class="fa fa-arrow-right"></i></a> -->
+                <a href="https://docs.google.com/forms/d/1wdscNuwYqamVPCqdsGCCqxWtXGljgK1T-5Ops9U3LYY/viewform" class="button no-fill runner">Register Here<i class="fa fa-arrow-right"></i></a>
             </div>
         </article>
     </section>
