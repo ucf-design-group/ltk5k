@@ -11,17 +11,21 @@
    <!--  <?php // Include registration form
     //include_once( 'partials/register.php' ); ?> -->
 
-    <section id="about" class="header-caption" style="background-color: rgb(122, 218, 250)">
+    <section id="about"class="header-caption" style="background-color: rgb(122, 218, 250)">
         <h4>Get your run on! Join us for the first ever Light The Knight 5k!</h4>
     </section>
 
     <section class="content">
         <article class='info'>
             <h3>General Information</h3>
+            <h4>About</h4>
             <p>Light the Knight 5K is a run/walk with a fun and exciting glow experience. The run is not timed and is meant to be enjoyed by runners as they go through different zones of color and music. Get ready to run/walk through the UCF campus glowing.</p>
+            <br>
+            <h4>What to wear</h4>
+            <p>We don't only want you to just enjoy the 5K but run it in style. Let your creativity flow and dress the part to match the event! We encourage you to give it your all but please do so comfortably as you are doing a 5K after all. If you are participating in the 5K, please wear closed-toe shoes.
         </article>
 
-        <article class="col-wrapper">
+        <article id= "location" class="col-wrapper">
             <div class="col-md-6">
                 <h3>When and Where?</h3>
                 <p>Date: <span>4/3/15</span></p>
@@ -31,14 +35,18 @@
             </div>
             <div class="col-md-6">
                 <h3>Map</h3>
-                <div class="map"></div>
+                <div class="map"><img src="img/map.jpg"></div>
             </div>
         </article>
 
         <article class='info'>
             <h3>After Party!</h3>
-            <p>The party doesn’t stop once you finish the 5K! After the run there will be a DJ battle competition hosted by Knights of the Turntables. Plan to stick around to choose the best DJ of the Knight as well enjoy some snacks and activities to keep the party going. Don not forget to take a picture to remember the occasion!</p>
+            <p>The party doesn't stop once you finish the 5K! After the run there will be a DJ battle competition hosted by Knights of the Turntables. Plan to stick around to choose the best DJ of the Knight as well enjoy some snacks and activities to keep the party going. Don't forget to take a picture to remember the occasion!</p>
         </article>
+
+        <article class='info'>
+        	<h3>Spectators</h3>
+        	<p>Spectators are welcome to watch at the start line on Memory Mall and as runners finish the run/walk. All spectators are also welcome to attend the after party and enjoy the festivities put on by Knights of the Turntables and Late Knights.</p>
     </section>
 
     
