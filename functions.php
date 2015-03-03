@@ -5,6 +5,23 @@ include_once( // Include global variables
 	'partials/global-variables.php' );
 
 
+function table_exists($tablename, $database = false) {
+
+    if(!$database) {
+        $res = mysql_query("SELECT DATABASE()");
+        $database = mysql_result($res, 0);
+    }
+
+    $res = mysql_query("
+        SELECT COUNT(*) AS count 
+        FROM information_schema.tables 
+        WHERE table_schema = '$database' 
+        AND table_name = '$tablename'
+    ");
+
+    return mysql_result($res, 0) == 1;
+
+}
 
 // Check for Form Submission
 
@@ -135,15 +152,10 @@ include_once( // Include global variables
 /** Page Partial Functions **/
 
 function get_header(){
-	include_once('partials/html-header.php');
+	include('partials/html-header.php');
 }
 
 
 function get_footer(){
-	include_once('partials/footer.php');
+	include('partials/footer.php');
 }
-
-/** Necessary Inclusions **/
-
-// Include registration objects for both runners and volunteers
-include_once( 'partials/models.php' );
