@@ -47,6 +47,7 @@
         <article class='info'>
         	<h3>Spectators</h3>
         	<p>Spectators are welcome to watch at the start line on Memory Mall and as runners finish the run/walk. All spectators are also welcome to attend the after party and enjoy the festivities put on by Knights of the Turntables and Late Knights.</p>
+        </article>
     </section>
 
     
