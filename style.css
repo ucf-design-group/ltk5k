@@ -468,7 +468,7 @@ section.no-padding article{
 
 section.no-margin article{
     margin:auto;
-    padding:; 3.5rem 0;
+    padding: 3.5rem 0;
 }
 
 section.header-caption{
@@ -676,6 +676,12 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
+label{
+    font-family: Montserrat;
+    font-size: .85rem;
+}
+
 /**
  * Define consistent border, margin, and padding.
  */
@@ -743,7 +749,7 @@ form:after {
 }
 
 img {
-    border: 3px solid #801417;
+    /*border: 6px solid rgb(12, 188, 12);*/
     max-width: 100%;
 }
 
@@ -793,11 +799,12 @@ footer {
     margin: auto;
     padding: 2em 0px;
     background-color:#2B2B2B;
+    /*background-color: #000;*/
     text-align: center;
 }
 
 footer .sponsors {
-    background-image: url(img/sprite.png);
+    background-image: url(img/sprite-white.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -934,7 +941,7 @@ ul.register-links i{
 }
 
 ul{
-    color:inheirt;
+/*    color:inheirt;*/
 }
 
 .col-wrapper{
@@ -965,9 +972,9 @@ ul{
 }
 
 .map{
-    background: url(img/sprite.png) no-repeat center 100%;
+    background: url(img/map.png) no-repeat 100%;
     width:100%;
-    height:auto;
+    height:inheirt;
 }
 
 
