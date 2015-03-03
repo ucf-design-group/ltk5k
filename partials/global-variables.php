@@ -19,7 +19,7 @@
  */
 
 
-/* Site constants */
+// /* Site constants */
 define('MAX_RUNNERS', 700);
 define('MAX_VOLUNTEERS', 205);
 define('REGISTRATION_DEADLINE', strtotime("April 2, 2015 11:59pm"));
@@ -28,9 +28,9 @@ define('REGISTRATION_DEADLINE', strtotime("April 2, 2015 11:59pm"));
 /* Server related variables */
 $servername = 'localhost';
 $database	= 'cab-ltk5k';
-$user 		= 'osi-admin';
+$user_name 	= "osi-admin";
 $pass 		= 'Design&Dev';
-$conn 		= new mysqli($servername, $user, $pass, $database);
+// $conn 		= mysql_connect($servername, "osi-admin", "Design&Dev");
 
 /**
  * Count variables
@@ -41,22 +41,34 @@ $conn 		= new mysqli($servername, $user, $pass, $database);
  * accurate count of registered members is requested.
  */
 
-$numRunners 			= runnersCount();
-$numVolunteers 			= volunteersCount();
+$numRunners 			= numRows('Runners');
+$numVolunteers 			= numRows('Volunteers');
 $remainingRunners 		= MAX_RUNNERS - $numRunners;
-$remainingVolunteers	= MAX_VOLUNTEERS - $numVolunteers
+$remainingVolunteers	= MAX_VOLUNTEERS - $numVolunteers;
 
 
 /* Getters for count information */
 
-// Returns the number of registered runners
-function runnersCount(){
-	return $conn->query("SELECT COUNT(*) FROM RUNNERS");
-}
+// Returns the number of registered individuals.
+function numRows($tableName){
 
-// Returns the number of registered volunteers.
-function volunteersCount(){
-	return $conn->query("SELECT COUNT(*) FROM VOLUNTEERS")
-}
+	// Connect to the database
+	$conn = mysql_connect($servername, "osi-admin", "Design&Dev");
 
+	// Check for connection error.
+	if (!$conn)
+	  die('Could not connect: ' . mysql_error());
+
+	// Connect to the appropriate database.
+	mysql_select_db($database, $conn);
+
+	// Get the elements form the specified table
+	$result = mysql_query("SELECT * FROM " . $tableName);
+	$num_rows = mysqli_num_rows($result);
+
+	// echo "Total rows: " . $num_rows;
+
+	// Always close the connection after connecting.
+	mysql_close($conn);
+}
 ?>
