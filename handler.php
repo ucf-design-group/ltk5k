@@ -38,50 +38,48 @@ if($_POST != null) {
 	/* Conditional form statements (form validation) */
 	// First name required.
 	if (!isset($_POST['ltk5k-form-fname']) || $_POST['ltk5k-form-fname'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide your first name.");
+		generateFormError("You need to provide your first name");
+		exit();
 	}
 	// Last name required.
 	if (!isset($_POST['ltk5k-form-lname']) || $_POST['ltk5k-form-lname'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide your last name.");
+		generateFormError("You need to provide your last name");
+		exit();
 	}
 	// E-mail required.
 	if (!isset($_POST['ltk5k-form-email']) || $_POST['ltk5k-form-email'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide your e-mail.");
+		generateFormError("You need to provide your email");
+		exit();
 	}
 	// Valid email filter.
 	if (!filter_var($_POST['ltk5k-form-email'], FILTER_VALIDATE_EMAIL)) {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide a valid e-mail address.");
+		generateFormError("You need to provide a valid email address");
+		exit();
 	}
 	// Phone number required.
 	if (!isset($_POST['ltk5k-form-phone']) || $_POST['ltk5k-form-phone'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide your phone number.");
+		generateFormError("You need to provide your phone number");
+		exit();
 	}
-
 	// Shirt size number required.
 	if (!isset($_POST['ltk5k-form-shirt-size']) || $_POST['ltk5k-form-shirt-size'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please select a shirt size.");
+		generateFormError("You need to provide your shirt size");
+		exit();
 	}
-
 	// Emergency contact name required.
 	if (!isset($_POST['ltk5k-form-ec-name']) || $_POST['ltk5k-form-ec-name'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide an emergency contact.");
+		generateFormError("You need to provide an emergency contact");
+		exit();
 	}
 	// Emergency phone number required.
 	if (!isset($_POST['ltk5k-form-ec-phone']) || $_POST['ltk5k-form-ec-phone'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide a phone number for your emergency contact.");
+		generateFormError("You need to provide an emergency contact phone number");
+		exit();
 	}
 	// Emergency contact relation required.
 	if (!isset($_POST['ltk5k-form-ec-relation']) || $_POST['ltk5k-form-ec-relation'] == "") {
-		header("HTTP/1.1 406 Unacceptable");
-		die("Please provide how your emergency contact is related to you.");
+		generateFormError("You need to provide your emergency contact's relation to you");
+		exit();
 	}
 
 
@@ -106,8 +104,10 @@ if($_POST != null) {
 	$conn = mysql_connect($servername, "osi-admin", "Design&Dev");
 	// Connect to database using MySqli protocol.
 	$conn = mysqli_connect($servername, "osi-admin", "Design&Dev");
-	if (!$conn)
-	    die("Connection failed: " . mysqli_connect_error());
+	if (!$conn){
+		generateFormError("Connection failed: " . mysqli_connect_error());
+		exit();
+	}
 
 
 	// Check database connection
@@ -257,7 +257,8 @@ if($_POST != null) {
 	// If the e-mail has already been used, return email already used error.
 	if(mysqli_num_rows($emailcheck) > 0 ){
 		header("HTTP/1.1 406 Unaccepatable");
-		die("This email address has already been used. Please email cabevent@ucf.edu to change your information.");
+		generateFormError("This email address has already been used. Please email cabevent@ucf.edu to change your information.");
+		exit();
 	}
 
 	/**
@@ -271,7 +272,8 @@ if($_POST != null) {
 			// of possible runners, then return registration full error.
 			if ($count['runners'] >= NUM_RUNNERS) {
 				header("HTTP/1.1 406 Unaccepatable");
-				die("Sorry, all of the runner spots are taken.");
+				generateFormError("Sorry, all of the runner spots are taken.");
+				exit();
 			}
 
 			// Continue with statement.
@@ -281,13 +283,10 @@ if($_POST != null) {
 
 			if ($count['volunteers'] >= NUM_VOLUNTEERS) {
 				header("HTTP/1.1 406 Unacceptable");
-				die("Sorry, all of the volunteer spots are taken.");
+				generateFormError("Sorry, all of the volunteer spots are taken.");
+				exit();
 			}
 			break;
-		
-		default:
-			header("HTTP/1.1 406 Unacceptable");
-			die("Sorry, that isn't a valid role.");
 	}
 
 

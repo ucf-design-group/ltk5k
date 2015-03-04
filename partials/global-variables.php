@@ -53,22 +53,21 @@ $remainingVolunteers	= MAX_VOLUNTEERS - $numVolunteers;
 function numRows($tableName){
 
 	// Connect to the database
-	$conn = mysql_connect($servername, "osi-admin", "Design&Dev");
+	$conn = mysqli_connect($servername, 'osi-admin', 'Design&Dev', $database);
 
 	// Check for connection error.
-	if (!$conn)
-	  die('Could not connect: ' . mysql_error());
-
-	// Connect to the appropriate database.
-	mysql_select_db($database, $conn);
+	if (!$conn){
+		generateFormError('Could not connect: ' . mysql_error());
+		exit();
+	}
 
 	// Get the elements form the specified table
-	$result = mysql_query("SELECT * FROM " . $tableName);
+	$result = mysql_query("SELECT (*) FROM " . $tableName);
 	$num_rows = mysqli_num_rows($result);
-
-	// echo "Total rows: " . $num_rows;
 
 	// Always close the connection after connecting.
 	mysql_close($conn);
+
+	return $num_rows;
 }
 ?>
