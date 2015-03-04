@@ -7,8 +7,14 @@ get_header(); ?>
 <body>
 	<header class="form-registration volunteers-header">
 		<section class="header-caption">
-			<article>
-				<h1>Volunteers</h1>
+			<article class="col-wrapper">
+				<div class="col-md-6">
+					<h3>Remaining Runner Slots</h3>
+					<h4><?php echo $numRunners ?></h4>
+				</div>
+				<div class="col-md-6">
+					<h3>Remaining Volunteer Slots</h3>
+					<h4><?php echo $remainingVolunteers ?></h4></div>
 			</article>
 		</section>
 		</header> 
@@ -27,13 +33,11 @@ get_header(); ?>
 		$reg = new Registrant;
 
 ?> 
-<section class="another-section"></section>
-<div></div>
 	<section class="content">
 
 		<article class="form" id="form">
 			
-			<h3>Thank you for helping us make this possible!</h3>
+			<!-- <h3>Thank you for helping us make this possible!</h3> -->
 			<p><strong>All fields are required.</strong> Please note, the Light The Knight 5k is only for current UCF Students.</p>
 			
 			<form class="form-wrapper" action='' method='POST' id='ltk5k-form'>
