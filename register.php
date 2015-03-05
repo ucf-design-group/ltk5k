@@ -14,7 +14,7 @@ get_header(); ?>
 				</div>
 				<div class="col-md-6">
 					<h3>Remaining Volunteer Slots</h3>
-					<h4><?php echo $remainingVolunteers ?></h4></div>
+					<h4><?php echo $numVolunteers ?></h4></div>
 			</article>
 		</section>
 		</header> 
@@ -107,10 +107,10 @@ get_header(); ?>
 							<option value="Medium" <?php if ($_POST['ltk5k-form-shirt'] == "Medium") echo "selected"; ?>>Medium</option>
 							<option value="Large" <?php if ($_POST['ltk5k-form-shirt'] == "Large") echo "selected"; ?>>Large</option>
 							<option value="X-Large" <?php if ($_POST['ltk5k-form-shirt'] == "X-Large") echo "selected"; */ ?>>X-Large</option> -->
-							<option value="Small">Small</option>
-							<option value="Medium">Medium</option>
-							<option value="Large">Large</option>
-							<option value="X-Large">X-Large</option>
+							<option value="S">Small</option>
+							<option value="M">Medium</option>
+							<option value="L">Large</option>
+							<option value="XL">X-Large</option>
 						</select>
 					</p>
 					</fieldset>

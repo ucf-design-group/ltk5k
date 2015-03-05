@@ -2,7 +2,7 @@
 
 
 include_once( // Include global variables 
-	'partials/global-variables.php' );
+	'global-variables.php' );
 
 
 function table_exists($tablename, $database = false) {
@@ -20,17 +20,37 @@ function table_exists($tablename, $database = false) {
     ");
 
     return mysql_result($res, 0) == 1;
-
 }
-
 
 // Redirects to the error page and passes the error in the header
 // which is then parsed for in the page.
 function generateFormError($error){
-	header("Location: http://osi.ucf.edu/ltk5k/registration-error?" .
-	http_build_query(array('error' => $error)));
+
+	// Start a new session.
+	session_start();
+
+	// Create a new variable 'error' which contains the error string
+	// to be displayed on the error page.
+	$_SESSION['error'] = $error;
+
+	/**
+	 *  Redirect user to error page within the current session.
+	 *
+	 *  Note that because we started a new session that all variables
+	 *  associated with the session will be passed to other pages that 
+	 *  enable the session passed to it.
+	 *
+	 * For more information on sessions, look here:
+	 * http://php.net/manual/en/book.session.php
+	 */
+	header("Location: http://osi.ucf.edu/ltk5k/registration-error");
 }
 
+// Redirects the user to
+function confirmRegistration(){
+	// Redirect to registration confirmation page.
+	header("Location: http://osi.ucf.edu/ltk5k/registration-complete");
+}
 
 /** Page Partial Functions **/
 
