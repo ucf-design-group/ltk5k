@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 include_once( 'functions.php' );
 get_header(); 
@@ -27,9 +26,7 @@ include( // Include registration form error partial
 unset($_SESSION['count']);
 
 get_footer(); ?>
-=======
 <?php 
 include( // Include registration form error partial
 	'partials/registration-error.php' );
 ?>
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2

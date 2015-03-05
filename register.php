@@ -1,9 +1,6 @@
 <?php
-<<<<<<< HEAD
 include_once( 'global-variables.php' );
-=======
 include_once( 'partials/global-variables.php' );
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 include( 'functions.php' );
 include( 'handler.php' );
 get_header(); ?>
@@ -18,11 +15,10 @@ get_header(); ?>
 				</div>
 				<div class="col-md-6">
 					<h3>Remaining Volunteer Slots</h3>
-<<<<<<< HEAD
+
 					<h4><?php echo $numVolunteers ?></h4></div>
-=======
 					<h4><?php echo $remainingVolunteers ?></h4></div>
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
+
 			</article>
 		</section>
 		</header> 
@@ -115,17 +111,16 @@ get_header(); ?>
 							<option value="Medium" <?php if ($_POST['ltk5k-form-shirt'] == "Medium") echo "selected"; ?>>Medium</option>
 							<option value="Large" <?php if ($_POST['ltk5k-form-shirt'] == "Large") echo "selected"; ?>>Large</option>
 							<option value="X-Large" <?php if ($_POST['ltk5k-form-shirt'] == "X-Large") echo "selected"; */ ?>>X-Large</option> -->
-<<<<<<< HEAD
+
 							<option value="S">Small</option>
 							<option value="M">Medium</option>
 							<option value="L">Large</option>
 							<option value="XL">X-Large</option>
-=======
 							<option value="Small">Small</option>
 							<option value="Medium">Medium</option>
 							<option value="Large">Large</option>
 							<option value="X-Large">X-Large</option>
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
+
 						</select>
 					</p>
 					</fieldset>

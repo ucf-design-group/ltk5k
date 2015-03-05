@@ -9,11 +9,7 @@ include_once( // Include object models
 	'partials/models.php' );
 
 include_once( // Include global variables
-<<<<<<< HEAD
 	'global-variables.php' );
-=======
-	'partials/global-variables.php' );
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 
 
 
@@ -35,13 +31,8 @@ if($_POST != null) {
 	 */
 	/* If the registration window has passed (REGISTRATION_DEADLINE) */
 	if (time() > REGISTRATION_DEADLINE) {
-<<<<<<< HEAD
 		generateFormError("Sorry, registration has closed!");
 		exit();
-=======
-		header("HTTP/1.1 406 Unacceptable");
-		die("Sorry, registration has closed!");
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 	}
 
 	/* Conditional form statements (form validation) */
@@ -118,19 +109,9 @@ if($_POST != null) {
 		exit();
 	}
 
-<<<<<<< HEAD
 	// Create new Registrant object (placeholder for runner/volunteer)
 	$registrant = new Registrant;
 
-=======
-
-	// Check database connection
-	// if (!$conn)
-	//   die('Could not connect: ' . mysql_error());
-
-	// Create new Registrant object (placeholder for runner/volunteer)
-	$registrant = new Registrant;
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 	/**
 	 *  Assign registrant's characteristics from form. Because this information
 	 *  is being passed to a database, it needs to be parsed for any special
@@ -147,22 +128,6 @@ if($_POST != null) {
 	$reg->emergency_relation	= mysql_real_escape_string($_POST['ltk5k-form-ec-relation']);
 	$reg->shirt_size			= mysql_real_escape_string($_POST['ltk5k-form-shirt-size']);
 
-<<<<<<< HEAD
-=======
-	//$tableName = $reg->role;
-
-	// echo nl2br("\n");
-	// echo nl2br("First Name: " . $reg->first_name . "\n");
-	// echo nl2br("Last Name: " . $reg->last_name . "\n");
-	// echo nl2br("Email: " . $reg->email . "\n");
-	// echo nl2br("Phone: " . $reg->phone . "\n");
-	// echo nl2br("Role: " . $reg->role . "\n");
-	// echo nl2br("Shirt Size: " . $reg->shirt_size . "\n");
-	// echo nl2br("Emergency Name: " . $reg->emergency_name . "\n");
-	// echo nl2br("Emergency Phone: " . $reg->emergency_phone . "\n");
-	// echo nl2br("Emergency Relation: " . $reg->emergency_relation . "\n");
-
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 	/**
 	 * Create a database table if one does not exist.
 	 *
@@ -211,11 +176,7 @@ if($_POST != null) {
 					lastname VARCHAR(60) NOT NULL,
 					email VARCHAR(100) NOT NULL,
 					phone VARCHAR(10) NOT NULL,
-<<<<<<< HEAD
 					shirt_size VARCHAR(2) NOT NULL,
-=======
-					shirt_size VARCHAR(3) NOT NULL,
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 					emergency_name VARCHAR(60) NOT NULL,
 					emergency_phone VARCHAR(10) NOT NULL,
 					emergency_relation VARCHAR(20) NOT NULL,
@@ -252,11 +213,7 @@ if($_POST != null) {
 					lastname VARCHAR(60) NOT NULL,
 					email VARCHAR(100) NOT NULL,
 					phone VARCHAR(10) NOT NULL,
-<<<<<<< HEAD
 					shirt_size VARCHAR(2) NOT NULL,
-=======
-					shirt_size VARCHAR(3) NOT NULL,
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 					emergency_name VARCHAR(60) NOT NULL,
 					emergency_phone VARCHAR(10) NOT NULL,
 					emergency_relation VARCHAR(20) NOT NULL,
@@ -354,11 +311,7 @@ if($_POST != null) {
 		"', '" . $reg->emergency_name .
 		"', '" . $reg->emergency_phone .
 		"', '" . $reg->emergency_relation .
-<<<<<<< HEAD
 		"', '" . date("Y-m-d H:i:s") . "')";  // Registrers date when record was created.
-=======
-		"', '" . date("Y-m-d H:i:s") . "')";
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 
 	// Check to make sure registration was completed successfully.
 	if ($conn->query($sql) === TRUE) {
@@ -369,16 +322,13 @@ if($_POST != null) {
 
 	// Close connection to database.
 	$conn->close();
-<<<<<<< HEAD
-	
+
 	/**
 	 * If this area has been reached, then the participant was successfully
 	 * registered and can continue onto the confirmation page.
 	 */
 	confirmRegistration();
 	exit();
-=======
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 }
 ?>
 

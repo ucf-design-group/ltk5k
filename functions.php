@@ -2,11 +2,7 @@
 
 
 include_once( // Include global variables 
-<<<<<<< HEAD
 	'global-variables.php' );
-=======
-	'partials/global-variables.php' );
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 
 
 function table_exists($tablename, $database = false) {
@@ -24,7 +20,6 @@ function table_exists($tablename, $database = false) {
     ");
 
     return mysql_result($res, 0) == 1;
-<<<<<<< HEAD
 }
 
 // Redirects to the error page and passes the error in the header
@@ -51,26 +46,12 @@ function generateFormError($error){
 	header("Location: http://osi.ucf.edu/ltk5k/registration-error");
 }
 
-// Redirects the user to
+// Redirects the user to registration confirmation page
 function confirmRegistration(){
 	// Redirect to registration confirmation page.
 	header("Location: http://osi.ucf.edu/ltk5k/registration-complete");
 }
 
-=======
-
-}
-
-
-// Redirects to the error page and passes the error in the header
-// which is then parsed for in the page.
-function generateFormError($error){
-	header("Location: http://osi.ucf.edu/ltk5k/registration-error?" .
-	http_build_query(array('error' => $error)));
-}
-
-
->>>>>>> 0ce53a4188795adc7227afb3c50446202eec36d2
 /** Page Partial Functions **/
 
 function get_header(){
