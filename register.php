@@ -1,5 +1,5 @@
 <?php
-include_once( 'partials/global-variables.php' );
+include_once( 'global-variables.php' );
 include( 'functions.php' );
 include( 'handler.php' );
 get_header(); ?>
