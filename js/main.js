@@ -22,9 +22,9 @@ $(window).scroll(function() {
 	// and if the user has scrolled more than 30px and doesn't already have the 'compressed'
 	// class, then add it. If the user scrolls above (under) 30px, remove the class	
 	if($(window).scrollTop() > 30) { 
-		$('nav').addClass('compressed'); 
+		$('.nav-fluid').addClass('compressed'); 
 	}
 	else {
-		$('nav').removeClass('compressed'); 
+		$('.nav-fluid').removeClass('compressed'); 
 	}
 });

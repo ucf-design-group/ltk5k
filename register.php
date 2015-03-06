@@ -1,14 +1,17 @@
 <?php
-include_once( 'global-variables.php' );
 include_once( 'partials/global-variables.php' );
 include( 'functions.php' );
 include( 'handler.php' );
-get_header(); ?>
+get_header();
+
+// Includes the page navigation
+include_once('partials/nav-static.php');
+?>
 
 <body>
-	<header class="form-registration volunteers-header">
+	<header class="form-registration registration-header">
 		<section class="header-caption">
-			<article class="col-wrapper">
+<!-- 			<article class="col-wrapper">
 				<div class="col-md-6">
 					<h3>Remaining Runner Slots</h3>
 					<h4><?php echo $numRunners ?></h4>
@@ -20,7 +23,11 @@ get_header(); ?>
 					<h4><?php echo $remainingVolunteers ?></h4></div>
 
 			</article>
-		</section>
+ -->		
+ 			<article>
+ 				<h3 style="color:black">Registration</h3>
+ 			</article>
+			</section>
 		</header> 
 	<section>
 
@@ -42,8 +49,9 @@ get_header(); ?>
 		<article class="form" id="form">
 			
 			<!-- <h3>Thank you for helping us make this possible!</h3> -->
+			<p> Don't forget to show up on <strong>April 3rd, 2015</strong> at <strong>7PM</strong> for check in!</p>
 			<p><strong>All fields are required.</strong> Please note, the Light The Knight 5k is only for current UCF Students.</p>
-			
+		
 			<form class="form-wrapper" action='' method='POST' id='ltk5k-form'>
 				
 				<fieldset>
@@ -111,11 +119,6 @@ get_header(); ?>
 							<option value="Medium" <?php if ($_POST['ltk5k-form-shirt'] == "Medium") echo "selected"; ?>>Medium</option>
 							<option value="Large" <?php if ($_POST['ltk5k-form-shirt'] == "Large") echo "selected"; ?>>Large</option>
 							<option value="X-Large" <?php if ($_POST['ltk5k-form-shirt'] == "X-Large") echo "selected"; */ ?>>X-Large</option> -->
-
-							<option value="S">Small</option>
-							<option value="M">Medium</option>
-							<option value="L">Large</option>
-							<option value="XL">X-Large</option>
 							<option value="Small">Small</option>
 							<option value="Medium">Medium</option>
 							<option value="Large">Large</option>

@@ -1,6 +1,10 @@
 <?php
 include_once( 'functions.php' );
-get_header(); 
+get_header();
+
+// Includes the page navigation
+include_once('partials/nav-static.php');
+
 
 /**
  * Registration Error Page
@@ -14,6 +18,7 @@ get_header();
 // Continue session from functions.php
 session_start();
 
+?> <header class="form-registration registration-msg-header"></header> <?php
 include( // Include registration form error partial
 	'partials/registration-error.php' );
 

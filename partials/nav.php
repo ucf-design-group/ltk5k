@@ -1,4 +1,4 @@
-<nav>
+<nav class="nav-fluid">
 	<section>
 		<article>
 			<a class="header-icon-link" href="http://osi.ucf.edu/ltk5k">
