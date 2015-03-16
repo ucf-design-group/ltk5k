@@ -12,7 +12,7 @@
 					<a class="button" onclick="$('#about').animatescroll({scrollSpeed:1250,easing:'easeInOutSine'});">About</a>
 				</li>
 				<li>
-					<a class="button" onclick="$('#location').animatescroll({scrollSpeed:1250,easing:'easeInOutSine'});">Location</a>
+					<a class="button" onclick="$('#djparty').animatescroll({scrollSpeed:1250,easing:'easeInOutSine'});">After Party</a>
 				</li>
 			</ul>
 		</article>

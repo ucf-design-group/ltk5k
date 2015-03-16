@@ -28,6 +28,10 @@
         <article id= "location" class="col-wrapper">
             <div class="col-md-6">
                 <h3>When and Where?</h3>
+                <h4>Memory Mall</h4>
+                <p>The race will begin outside of the Psychology building on Memory Mall. Here is where you will be able to sign in and pick up your free t-shirt!</p>
+                <br/>
+                <h4>Time & Details</h4>
                 <p>Date: <span>4/3/15</span></p>
                 <p>Check-in: <span>7PM</span></p>
                 <p>Race Time: <span>8PM</span></p>
@@ -35,11 +39,11 @@
             </div>
             <div class="col-md-6">
                 <h3>Map</h3>
-                <div class="map"><img src="img/map.jpg"></div>
+                <div class="map"><img src="img/map.png"></div>
             </div>
         </article>
 
-        <article class='info'>
+        <article  id='djparty' class='info'>
             <h3>After Party!</h3>
             <p>The party doesn't stop once you finish the 5K! After the run there will be a DJ battle competition hosted by Knights of the Turntables. Plan to stick around to choose the best DJ of the Knight as well enjoy some snacks and activities to keep the party going. Don't forget to take a picture to remember the occasion!</p>
         </article>
