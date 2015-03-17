@@ -54,4 +54,31 @@ class Emergency{
 	var $emergency_relation_label = "Emergency Contact Relation";
 	var $emergency_relation;
 }
+
+class DJ extends Registrant{
+	
+	/*First Name*/
+	
+	/*Last Name*/
+
+	/*DJ Name*/
+	var $dj_name_label = "DJ Name";
+	var $dj_name;
+
+	/*Audition Time First Choice*/
+	var $time_first_label = "Audition Time First Choice";
+	var $time_first;
+
+	/*Audition Time Second Choice*/
+	var $time_second_label = "Audition Time Second Choice";
+	var $time_second;
+
+	/*Number of Years DJing*/
+	var $num_years_label = "DJing Experience";
+	var $nuym_years;
+
+	/*Music Hosting Services (optional)*/
+	var $mus_host_serv_label = "Music Hosting Service (Optional)";
+	var $mus_host_serv;
+}
 ?>

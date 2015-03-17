@@ -50,7 +50,7 @@
             <h3>After Party!</h3>
             <p>The party doesn't stop once you finish the 5K! After the run there will be a DJ battle competition hosted by Knights of the Turntables. Plan to stick around to choose the best DJ of the Knight as well enjoy some snacks and activities to keep the party going. Don't forget to take a picture to remember the occasion!
                 <div class="btn-fill">
-                    <a class="register button btn-fill" onclick="$('#djparty').animatescroll({scrollSpeed:1250,easing:'easeInOutSine'});">Learn More</a>
+                    <a href="http://osi.ucf.edu/ltk5k/djparty" class="register button btn-fill">Learn More</a>
                 </div>
         </article>
     </section>

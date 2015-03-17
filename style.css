@@ -343,6 +343,11 @@ header {
     overflow:hidden;
 }
 
+header#djheader{
+    height:4em;
+    background:none;
+}
+
 header .banner {
     background-image: url(img/header.png);
     background-repeat: no-repeat;
@@ -861,6 +866,18 @@ form fieldset select {
     width: 33.33333%;
     margin-bottom: 1em;
     color: black;
+}
+
+form fieldset textarea {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding:.25em;
+    border: thin solid gainsboro;/*rgb(0, 166, 204);*/
+    font-size: .8em;
+    color: #000;
+    border-radius:2px;
+    max-width:none;
+    width:90%;
+    min-width:260px;   
 }
 
 form table.role {
