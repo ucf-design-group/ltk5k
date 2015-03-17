@@ -12,7 +12,6 @@ include_once('partials/nav-static.php');
  * event. This will be the confirmation page for registrants.
  */
 
-
 ?> <header class="form-registration registration-msg-header"></header> <?php
 
 include( // Include registration form error partial

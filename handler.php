@@ -52,8 +52,10 @@ if($_POST != null) {
 		exit();
 	}
 	// Valid email filter.
-	if (!filter_var($_POST['ltk5k-form-email'], FILTER_VALIDATE_EMAIL)) {
-		generateFormError("You need to provide a valid email address");
+	// Gets url extension from email input
+	$email = explode('@', $_POST['ltk5k-form-email']);
+	if (!filter_var($_POST['ltk5k-form-email'], FILTER_VALIDATE_EMAIL) || $email[1] != 'knights.ucf.edu') {
+		generateFormError("This even is for current UCF students only. Please provide a valid knights email address");
 		exit();
 	}
 	// Phone number required.
@@ -136,95 +138,94 @@ if($_POST != null) {
 	 * if one does not already exist. This can be used in other places to quickly 
 	 * create more tables if necessary.
 	 */
+	
+	// If the registrant is a runner
+	if($reg->role == 'runner'){
 
-	switch ($reg->role){
+		// Switch role to Runners in preperation for placing in the appropriate
+		// database table.
+		$tableName = "Runners";
 
-		// If the registrant is a runner
-		case 'runner':
-
-			// Switch role to Runners in preperation for placing in the appropriate
-			// database table.
-			$tableName = "Runners";
-
-			// Check to make sure the database table exists.
-			if(table_exists($tableName, $database)){
-				// do nothing if a value is returned (means table exists).
-			}
-			// If this is reached, it indicates that a table does not exist.
-			else {
-
-				// Create new connection to database
-				$conn = new mysqli($servername, 'osi-admin', 'Design&Dev', $database);
-
-				/**
-				 * Create a new database table 'Runners' that will hold all information
-				 * pertaining to registered runners.
-				 *
-				 * @var int auto-incrementing counter
-				 * @var varchar first name				
-				 * @var varchar last name
-				 * @var varchar email
-				 * @var int phone number
-				 * @var varchar shirt size
-				 * @var varchar emergency contact name
-				 * @var int emergency contact phone number
-				 * @var varchar emergency contact relation	
-				 */
-				$sql = "CREATE TABLE Runners (
-					id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-					firstname VARCHAR(30) NOT NULL,
-					lastname VARCHAR(60) NOT NULL,
-					email VARCHAR(100) NOT NULL,
-					phone VARCHAR(10) NOT NULL,
-					shirt_size VARCHAR(2) NOT NULL,
-					emergency_name VARCHAR(60) NOT NULL,
-					emergency_phone VARCHAR(10) NOT NULL,
-					emergency_relation VARCHAR(20) NOT NULL,
-					registration_date VARCHAR(20) NOT NULL
-				)";
-			
-				// Check if the database table is created successfully.
-				if ($conn->query($sql) === TRUE){}
-				    // echo "Table ". $tableName ." created successfully";
-				else{}
-					// If there was an error...
-				    // echo "Error creating table: " . $conn->error;
-
-			// Close the connection to the database and break from the switch.
-			$conn->close();
-			break;
+		// Check to make sure the database table exists.
+		if(table_exists($tableName, $database)){
+			// do nothing if a value is returned (means table exists).
 		}
-		// If the registrant is a volunteer.
-		case 'volunteer': 
+		// If this is reached, it indicates that a table does not exist.
+		else {
 
-			// This is the same code as the code above, but instead, it creates a table
-			// called Volunteers rather than Runners with the same information.
-			
-			$tableName = "Volunteers";
-			
-			if(table_exists($tablename, $database)){
-				echo "volunteers break"; break;
-			}
-			else {
-				$conn = new mysqli($servername, 'osi-admin', 'Design&Dev', $database);
-				$sql = "CREATE TABLE Volunteers (
-					id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-					firstname VARCHAR(30) NOT NULL,
-					lastname VARCHAR(60) NOT NULL,
-					email VARCHAR(100) NOT NULL,
-					phone VARCHAR(10) NOT NULL,
-					shirt_size VARCHAR(2) NOT NULL,
-					emergency_name VARCHAR(60) NOT NULL,
-					emergency_phone VARCHAR(10) NOT NULL,
-					emergency_relation VARCHAR(20) NOT NULL,
-					registration_date VARCHAR(20) NOT NULL
-				)";
+			// Create new connection to database
+			$conn = new mysqli($servername, 'osi-admin', 'Design&Dev', $database);
 
-				if ($conn->query($sql) === TRUE){}
-				    // echo "Table ". $tableName ." created successfully";
-				else{}
-				    // echo "Error creating table: " . $conn->error;
-			}
+			/**
+			 * Create a new database table 'Runners' that will hold all information
+			 * pertaining to registered runners.
+			 *
+			 * @var int auto-incrementing counter
+			 * @var varchar first name				
+			 * @var varchar last name
+			 * @var varchar email
+			 * @var int phone number
+			 * @var varchar shirt size
+			 * @var varchar emergency contact name
+			 * @var int emergency contact phone number
+			 * @var varchar emergency contact relation	
+			 */
+			$sql = "CREATE TABLE Runners (
+				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+				firstname VARCHAR(30) NOT NULL,
+				lastname VARCHAR(60) NOT NULL,
+				email VARCHAR(100) NOT NULL,
+				phone VARCHAR(10) NOT NULL,
+				shirt_size VARCHAR(2) NOT NULL,
+				emergency_name VARCHAR(60) NOT NULL,
+				emergency_phone VARCHAR(10) NOT NULL,
+				emergency_relation VARCHAR(20) NOT NULL,
+				registration_date VARCHAR(20) NOT NULL
+			)";
+		
+			// Check if the database table is created successfully.
+			if ($conn->query($sql) === TRUE){}
+			    // echo "Table ". $tableName ." created successfully";
+			else{}
+				// If there was an error...
+			    // echo "Error creating table: " . $conn->error;
+
+		// Close the connection to the database and break from the switch.
+		$conn->close();
+		break;
+		}	
+	}
+	// If the registrant is a volunteer.
+	else {
+
+		// This is the same code as the code above, but instead, it creates a table
+		// called Volunteers rather than Runners with the same information.
+		
+		$tableName = "Volunteers";
+		
+		if(table_exists($tablename, $database)){
+			echo "volunteers break"; break;
+		}
+		else {
+			$conn = new mysqli($servername, 'osi-admin', 'Design&Dev', $database);
+			$sql = "CREATE TABLE Volunteers (
+				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+				firstname VARCHAR(30) NOT NULL,
+				lastname VARCHAR(60) NOT NULL,
+				email VARCHAR(100) NOT NULL,
+				phone VARCHAR(10) NOT NULL,
+				shirt_size VARCHAR(2) NOT NULL,
+				emergency_name VARCHAR(60) NOT NULL,
+				emergency_phone VARCHAR(10) NOT NULL,
+				emergency_relation VARCHAR(20) NOT NULL,
+				registration_date VARCHAR(20) NOT NULL
+			)";
+
+			if ($conn->query($sql) === TRUE){}
+			    // echo "Table ". $tableName ." created successfully";
+			else{}
+			    // echo "Error creating table: " . $conn->error;
+		}
 	}
 
 
@@ -247,29 +248,24 @@ if($_POST != null) {
 	/**
 	 * Switch statement to check if either registration grouping is filled up.
 	 */
-	switch ($reg->role) {
+	if ($reg->role == 'runner') {
 
-		case 'runner':
+		// If the runner count is greater than or equal to the max number
+		// of possible runners, then return registration full error.
+		if ($count['runners'] >= NUM_RUNNERS) {
+			header("HTTP/1.1 406 Unaccepatable");
+			generateFormError("Sorry, all of the runner spots are taken.");
+			exit();
+		}
+	}
+	else {
 
-			// If the runner count is greater than or equal to the max number
-			// of possible runners, then return registration full error.
-			if ($count['runners'] >= NUM_RUNNERS) {
-				header("HTTP/1.1 406 Unaccepatable");
-				generateFormError("Sorry, all of the runner spots are taken.");
-				exit();
-			}
-
-			// Continue with statement.
-			break;
-		
-		case 'volunteer':
-
-			if ($count['volunteers'] >= NUM_VOLUNTEERS) {
-				header("HTTP/1.1 406 Unacceptable");
-				generateFormError("Sorry, all of the volunteer spots are taken.");
-				exit();
-			}
-			break;
+		// Continue with statement.
+		if ($count['volunteers'] >= NUM_VOLUNTEERS) {
+			header("HTTP/1.1 406 Unacceptable");
+			generateFormError("Sorry, all of the volunteer spots are taken.");
+			exit();
+		}
 	}
 
 
@@ -299,7 +295,6 @@ if($_POST != null) {
 	 * for the table key, which is essential to parse the table. This space must be
 	 * left open for a numerical key value to be automatically placed in it.
 	 */
-
 	$conn = new mysqli($servername, 'osi-admin', 'Design&Dev', $database);
 	$sql = "INSERT INTO " . $tableName . 
 		"(firstname, lastname, email, phone, shirt_size, emergency_name, emergency_phone, emergency_relation, registration_date)" .

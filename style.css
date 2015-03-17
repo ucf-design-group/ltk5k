@@ -401,9 +401,13 @@ nav .button:hover {
     padding:3em;
     background-color: rgba(0, 0, 0, .3);
     margin:auto;
-
 }
-.button-overlay-wrapper a{
+.btn-fill{
+    margin-top:60px;
+    cursor:pointer;
+}
+
+.btn-fill a{
     border-radius: 2px;
     padding: 1em 2.2em;
     text-transform: uppercase;
@@ -411,16 +415,24 @@ nav .button:hover {
     color: white;
     font-family: Open Sans;
     letter-spacing: .3em;
-    margin: 15px;
+    /*margin:30px 0 !important;*/
+    /*margin: 15px;*/
     font-weight: 100;
     max-width: 400px;
+    cursor:pointer;
 }
 
-.button-overlay-wrapper a.register{
+.btn-fill a:hover,
+.btn-fill a:active {
+    
+
+}
+
+.btn-fill a.register{
     background-color: #3DC8DA;
 }
 
-.button-overlay-wrapper a.video{
+.btn-fill a.video{
     background-color: #D63DDA ; 
 }
 
