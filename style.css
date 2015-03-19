@@ -850,7 +850,8 @@ form fieldset {
     border: 0px none;
 }
 
-form fieldset input {
+form fieldset input,
+form fieldset textarea {
     background-color: rgba(255, 255, 255, 0.2);
     padding:.25em;
     border: thin solid gainsboro;/*rgb(0, 166, 204);*/
@@ -869,15 +870,7 @@ form fieldset select {
 }
 
 form fieldset textarea {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding:.25em;
-    border: thin solid gainsboro;/*rgb(0, 166, 204);*/
     font-size: .8em;
-    color: #000;
-    border-radius:2px;
-    max-width:none;
-    width:90%;
-    min-width:260px;   
 }
 
 form table.role {
@@ -918,6 +911,7 @@ about{
     left:0;
     height:100vh;
     width:100%;
+    background-color:black;
 }
 
 #video-wrapper video{
