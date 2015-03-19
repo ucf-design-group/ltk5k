@@ -29,8 +29,8 @@
                 <li>Must be a UCF Student to audition.</li>
                 <li>Each set must include at least 3 different genres. Remixes are allowed but sets must include at least 3 completely separate genres, not EDM remixes of different genres.</li>
                 <li>Interest meeting will be held during Knights of the Turntables DJ Shadow meeting Wednesday <strong>March 18th, 2015</strong> in the Student Union 224 at 4:30pm.
-                <li>Interested DJs must sign up for audition times here (Link to Registration Section). Registration will close <strong>Thursday March 19th at 5pm.</strong></li>
-                <li>Auditions will take place <strong>Thursday March 19th, 2015</strong> in the Garden Key Ballroom (room 223) in the Student Union from 8pm-12am.</li>
+                <li>Auditions will take place <strong>Thursday March 19th, 2015</strong> in the Office of Student Involvement Conference Room (Room 208) in the Student Union at 8pm.</li>
+                <li>DJs will be auditioned on a first come first served basis</li>
                 <li>All music <strong>must be clean.</strong></li>
                 <li><strong>No</strong> prerecorded mixes allowed. Computers screens will be projected during auditions.</li>
                 <li>DJs should bring all equipment need to perform (speaker will be provided). Pioneer CDJ 900s and Nexus mixer is available upon request, please email <a href="mailto:Turntables@ucf.edu">Turntables@ucf.edu</a> when audition time is confirmed to notify if this will be needed.</li>
